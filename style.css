@@ -1,6 +1,6 @@
 body {
     background-color: rgb(189, 189, 189);
-    display: flex;
+    
 }
 .game-logo {
     display: flex;
@@ -10,4 +10,19 @@ body {
     height: 60px;
     align-items: center;
     justify-content: center;
+}
+.game-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rock {
+    width: 80px;
+}
+.paper {
+    width: 80px;
+    height: 80px;
+}
+.scissor {
+    width: 80px;
 }
