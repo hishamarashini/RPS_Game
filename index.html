@@ -12,21 +12,26 @@
         <heading class="game-logo">
             <h1 class="logo">Rock_Paper_Scissor</h1>
         </heading>
+
         <div class="game-area">
-            <div onclick="">
-                <img class="rock" src="assets\images\rock.png">
-                
-            </div>
-            <div onclick="">
-                <img class="paper" src="assets\images\Paper.png">
-                
-            </div>
-            <div onclick="">
-                <img  class="scissor"src="assets\images\scissors.png">
-                
-            </div>
+            <img class="rock" src="" id="h1-cpu">
+            <h1 class="choose">Choose to play</h1>
 
+            <div class="sorting-game">
+                <div onclick="runGame(0)">
+                    <img class="rock" src="assets\images\rock.png" alt="rock">
+                </div>
+                <div onclick="runGame(1)">
+                    <img class="paper" src="assets\images\Paper.png" alt="paper">
+                </div>
+                <div onclick="runGame(2)">
+                    <img  class="scissor"src="assets\images\scissors.png" alt="scissor">
+                </div>
 
+            </div>
+        </div>
+        <div class="result">
+            <h1 id="h1-result">Result</h1>
         </div>
 
     </body>
