@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(189, 189, 189);
+    display: flex;
+}
+.game-logo {
+    display: flex;
+    color: brown;
+    background-color: bisque;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
