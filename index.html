@@ -10,12 +10,12 @@
 
     <body>
         <heading class="game-logo">
-            <h1 class="logo">Rock_Paper_Scissor</h1>
+            <p class="logo">Rock_Paper_Scissor</p>
         </heading>
 
         <div class="game-area">
-            <img class="rock" src="" id="h1-cpu">
-            <h1 class="choose">Choose to play</h1>
+            <img class="rock" src="" id="img-cpu">
+            <h1 class="choose">Win six of ten</h1>
 
             <div class="sorting-game">
                 <div onclick="runGame(0)">
@@ -30,9 +30,19 @@
 
             </div>
         </div>
+
+        <div id="myWin" class="winner">
+            <img src="" id="gameEnd_img">
+        </div>
+
         <div class="result">
             <h1 id="h1-result">Result</h1>
         </div>
 
+        <div class="score_style">
+            <h2 id="score_won">Won: </h2>
+            <h2 id="score_tie">Tie: </h2>
+            <h2 id="score_lost">Lost: </h2>
+        </div>
     </body>
 </html>
