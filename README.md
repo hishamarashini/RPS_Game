@@ -12,9 +12,7 @@ Its a simple game that player will try to win six of ten attempts either a winne
 The header is the logo **ROCK_PAPER_SCISSOR** with clear contrast with the background color.
 - Game view
 In the center of the screen player will find text that explain for him to push one of the three images that are found in the middle also and they are images of the shapes of Rock , paper and Scissor
-<img src="assets/images/rock.png" alt="Rock"  style="width:60px"/>
-<img src="assets/images/Paper.png" alt="Paper"  style="width:60px"/>
-<img src="assets/images/scissors.png" alt="Scissor"  style="width:60px"/>
+<img src="assets/images/rock.png" alt="Rock"  style="width:80px"/> <img src="assets/images/Paper.png" alt="Paper"  style="width:80px"/> <img src="assets/images/scissors.png" alt="Scissor"  style="width:80px"/>
 
 ### Testing
 >The page is tested in different browsers, Chrome, Firefox, and Edge.
