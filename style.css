@@ -134,9 +134,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 60px;
+        margin-top: 50px;
     
-        width: 90%;
+        width: 80%;
         min-height: fit-content;
         max-width: 830px;
         margin-left: auto;
