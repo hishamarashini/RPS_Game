@@ -47,14 +47,20 @@ function runGame(user_choice) {
     document.getElementById("score_tie").innerHTML ="Tie:" + scoreTie.toString();
     document.getElementById("score_lost").innerHTML="Lost:" + scoreLose.toString();
 
-    if(scoreWon === 6 && scoreLose < 6){
+    if(scoreWon === 6 && scoreLose < 6 && scoreTie < 6){
         // you won
         document.getElementById("gameEnd_img").src = "assets/images/champion-clipart.png";
+        document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
-        
-    }else if(scoreLose === 6 && scoreWon < 6){
+    }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
+        document.getElementById("gameEnd_img").className = "";
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
         gameEnded = true;
+    }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
+        document.getElementById("gameEnd_img").className = "tie_style";
+        document.getElementById("gameEnd_img").src ="assets/images/tie.png";
+        gameEnded = true
     }
+
 }
