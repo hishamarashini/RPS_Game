@@ -11,6 +11,7 @@ function runGame(user_choice) {
         scoreLose = 0;
         document.getElementById("gameEnd_img").src = "";
         gameEnded = false;
+        document.getElementById("score").style.display = "flex";
     }
 
     let cpu_choice = Math.floor(Math.random() * 3);
@@ -52,15 +53,18 @@ function runGame(user_choice) {
         document.getElementById("gameEnd_img").src = "assets/images/champion-clipart.png";
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
+        document.getElementById("score").style.display = "none"
     }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
         document.getElementById("gameEnd_img").className = "";
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
         gameEnded = true;
+        document.getElementById("score").style.display = "none"
     }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
         document.getElementById("gameEnd_img").className = "tie_style";
         document.getElementById("gameEnd_img").src ="assets/images/tie.png";
-        gameEnded = true
+        gameEnded = true;
+        document.getElementById("score").style.display = "none"
     }
 
 }
