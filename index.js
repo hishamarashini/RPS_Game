@@ -17,14 +17,14 @@ function runGame(user_choice) {
     let cpu_choice = Math.floor(Math.random() * 3);
     
     if (cpu_choice === 0 ){
-        document.getElementById("img-cpu").src = "assets/images/rock.png"
-        document.getElementById("img-cpu").className = "rock"
+        document.getElementById("img-cpu").src = "assets/images/rock.png";
+        document.getElementById("img-cpu").className = "rock";
     }else if(cpu_choice === 1 ){
-        document.getElementById("img-cpu").src = "assets/images/Paper.png"
-        document.getElementById("img-cpu").className = "paper"
+        document.getElementById("img-cpu").src = "assets/images/Paper.png";
+        document.getElementById("img-cpu").className = "paper";
     }else {
-        document.getElementById("img-cpu").src = "assets/images/scissors.png"
-        document.getElementById("img-cpu").className = "scissor"
+        document.getElementById("img-cpu").src = "assets/images/scissors.png";
+        document.getElementById("img-cpu").className = "scissor";
     }
 
     if (user_choice === cpu_choice){
@@ -53,18 +53,18 @@ function runGame(user_choice) {
         document.getElementById("gameEnd_img").src = "assets/images/champion-clipart.png";
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
-        document.getElementById("score").style.display = "none"
+        document.getElementById("score").style.display = "none";
     }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
         document.getElementById("gameEnd_img").className = "";
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
         gameEnded = true;
-        document.getElementById("score").style.display = "none"
+        document.getElementById("score").style.display = "none";
     }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
         document.getElementById("gameEnd_img").className = "tie_style";
         document.getElementById("gameEnd_img").src ="assets/images/tie.png";
         gameEnded = true;
-        document.getElementById("score").style.display = "none"
+        document.getElementById("score").style.display = "none";
     }
 
 }
@@ -86,33 +86,33 @@ function switch_active_choice(target)
 	switch (target)
 	{
 		case 0:
-			document.getElementById("img-cpu").src = "assets/images/rock.png"
-            document.getElementById("img-cpu").className = "rock"
+			document.getElementById("img-cpu").src = "assets/images/rock.png";
+            document.getElementById("img-cpu").className = "rock";
 			break;
 		case 1:
-            document.getElementById("img-cpu").src = "assets/images/Paper.png"
-            document.getElementById("img-cpu").className = "paper"
+            document.getElementById("img-cpu").src = "assets/images/Paper.png";
+            document.getElementById("img-cpu").className = "paper";
 			break;
 		case 2:
-            document.getElementById("img-cpu").src = "assets/images/scissors.png"
-            document.getElementById("img-cpu").className = "scissor"
+            document.getElementById("img-cpu").src = "assets/images/scissors.png";
+            document.getElementById("img-cpu").className = "scissor";
 			break;
 	}
 }
 
 async function fake_choosing() {
 	let loop_till_result = 10; // iterations until result shown.
-	current = getRandomInt(0, 3)
-	delta = 1
+	current = getRandomInt(0, 3);
+	delta = 1;
 
 	for(let i = 0; i < loop_till_result; i++)
 	{
 		if(current == 2) { delta = -1; } else if(current == 0) { delta = 1; }
 		current += delta;
 
-		switch_active_choice(current)
+		switch_active_choice(current);
 
-		await sleep(Math.max(100,i*10))
+		await sleep(Math.max(100,i*10));
 	}
 }
 
@@ -157,19 +157,19 @@ async function choose(user_choice){
         document.getElementById("gameEnd_img").src = "assets/images/champion-clipart.png";
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
-        document.getElementById("score").style.display = "none"
+        document.getElementById("score").style.display = "none";
     }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
-        document.getElementById("score").style.display = "none"
+        document.getElementById("score").style.display = "none";
     }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
         // Tied
         document.getElementById("gameEnd_img").className = "tie_style";
         document.getElementById("gameEnd_img").src = "assets/images/tie.png";
         gameEnded = true;
-        document.getElementById("score").style.display = "none"
+        document.getElementById("score").style.display = "none";
     }
 
 		running = false;

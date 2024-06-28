@@ -24,11 +24,15 @@ The header has the name of the game **Rock_Paper_Scissor**
 **HTML**
 
 
+
+
 **CSS**
+
 ![css Validator](assets/readme_images/jigsaw_validator.png)
 
 
 **Accessibility
+
 I confirmed that the colors and fonts chosen are easy to read and accessible by running them in lighthouse.
 ![lighthouse](assets/readme_images/lighthous_test.png)
 ![performance](assets/readme_images/performance_lighthouse.png)
