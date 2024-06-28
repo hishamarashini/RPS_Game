@@ -23,7 +23,7 @@ The header has the name of the game **Rock_Paper_Scissor**
 ### Validator Testing
 **HTML**
 
-
+![HTML_Validator](assets/readme_images/HTML_Validator.JPG)
 
 
 **CSS**
