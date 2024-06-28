@@ -110,7 +110,7 @@ async function fake_choosing() {
 		if(current == 2) { delta = -1; } else if(current == 0) { delta = 1; }
 		current += delta;
 
-		await switch_active_choice(current)
+		switch_active_choice(current)
 
 		await sleep(Math.max(100,i*10))
 	}
@@ -135,14 +135,14 @@ async function choose(user_choice){
 		await fake_choosing();
 		let cpu_choice = getRandomInt(0,2);
 		console.log(cpu_choice);
-		await switch_active_choice(cpu_choice);
+		switch_active_choice(cpu_choice);
 
 		if(cpu_choice === user_choice){
 			document.getElementById("h1-result").innerHTML = "Tie";
             scoreTie += 1;
 		}else if( (cpu_choice === 0 && user_choice === 2) || (cpu_choice === 2 && user_choice === 1) || (cpu_choice === 1 && user_choice === 0)){
 			document.getElementById("h1-result").innerHTML = "You Lost";
-			scoreLose -= 1;
+			scoreLose += 1;
 		}else {
 			document.getElementById("h1-result").innerHTML = "You Won";
 			scoreWon += 1;
@@ -160,8 +160,8 @@ async function choose(user_choice){
         document.getElementById("score").style.display = "none"
     }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
-        document.getElementById("gameEnd_img").className = "";
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
+        document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
         document.getElementById("score").style.display = "none"
     }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
