@@ -35,7 +35,7 @@ The header has the name of the game **Rock_Paper_Scissor**
 ![JSHint](assets/readme_images/JShint.JPG)
 
 
-**Accessibility
+**Accessibility**
 
 I confirmed that the colors and fonts chosen are easy to read and accessible by running them in lighthouse.
 ![lighthouse](assets/readme_images/lighthous_test.png)
