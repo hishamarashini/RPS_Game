@@ -15,7 +15,11 @@ In the center of the screen player will find text that explain for him to push o
 
 ---
 <img src="assets/images/rock.png" alt="Rock"  style="width:80px"/> <img src="assets/images/Paper.png" alt="Paper"  style="width:80px"/> <img src="assets/images/scissors.png" alt="Scissor"  style="width:80px"/>
+---
 
+---
+Under the images the player will find the result and counter for winning , tie, and lost
+<img src="assets/readme_images/resultscreenshot.jpg" alt="Result"  style="width:100px"/>
 ### Testing
 >The page is tested in different browsers, Chrome, Firefox, and Edge.
 >I confirmewd that the project is responsive, looks good and functionon all standard screens size with good color contrast.
