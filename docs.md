@@ -96,4 +96,4 @@ And for more nice visual i added images that explain for the user know that eith
 
 ### Basic Design principle
 
-
+![wireframe](assets/readme_images/wireframe_iPhone-14-&-15-Pro-Max---1.png)
