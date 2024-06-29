@@ -47,7 +47,7 @@ I confirmed that the colors and fonts chosen are easy to read and accessible by 
 
 **Credits**
 Content
-- The code async explanation was taken from w3School 
+- The reference of code async explanation was from w3School 
 
 Media
 - The images from google clipart images.
