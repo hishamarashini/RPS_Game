@@ -44,3 +44,10 @@ Under the images the player will find the result and counter for winning , tie, 
 I confirmed that the colors and fonts chosen are easy to read and accessible by running them in lighthouse.
 ![lighthouse](assets/readme_images/lighthous_test.png)
 ![performance](assets/readme_images/performance_lighthouse.png)
+
+**Credits**
+Content
+- The code async explanation was taken from w3School 
+
+Media
+- The images from google clipart images.
