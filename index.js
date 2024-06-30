@@ -76,15 +76,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function sleep(ms)
-{
+function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function switch_active_choice(target)
-{
-	switch (target)
-	{
+function switch_active_choice(target){
+	switch (target)	{
 		case 0:
 			document.getElementById("img-cpu").src = "assets/images/rock.png";
             document.getElementById("img-cpu").className = "rock";
@@ -105,8 +102,7 @@ async function fake_choosing() {
 	current = getRandomInt(0, 3);
 	delta = 1;
 
-	for(let i = 0; i < loop_till_result; i++)
-	{
+	for(let i = 0; i < loop_till_result; i++){
 		if(current == 2) { delta = -1; } else if(current == 0) { delta = 1; }
 		current += delta;
 
