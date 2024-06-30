@@ -54,13 +54,13 @@ function runGame(user_choice) {
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
         document.getElementById("score").style.display = "none";
-    }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
+    } else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
         document.getElementById("gameEnd_img").className = "";
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
         gameEnded = true;
         document.getElementById("score").style.display = "none";
-    }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
+    } else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
         document.getElementById("gameEnd_img").className = "tie_style";
         document.getElementById("gameEnd_img").src ="assets/images/tie.png";
         gameEnded = true;
@@ -116,8 +116,7 @@ let score = 0;
 let running = false;
 
 async function choose(user_choice){
-	if(!running)
-	{
+	if(!running){
         if(gameEnded){
             scoreWon = 0;
             scoreTie = 0;
@@ -136,10 +135,10 @@ async function choose(user_choice){
 		if(cpu_choice === user_choice){
 			document.getElementById("h1-result").innerHTML = "Tie";
             scoreTie += 1;
-		}else if( (cpu_choice === 0 && user_choice === 2) || (cpu_choice === 2 && user_choice === 1) || (cpu_choice === 1 && user_choice === 0)){
+		} else if( (cpu_choice === 0 && user_choice === 2) || (cpu_choice === 2 && user_choice === 1) || (cpu_choice === 1 && user_choice === 0)){
 			document.getElementById("h1-result").innerHTML = "You Lost";
 			scoreLose += 1;
-		}else {
+		} else {
 			document.getElementById("h1-result").innerHTML = "You Won";
 			scoreWon += 1;
 		}
@@ -154,13 +153,13 @@ async function choose(user_choice){
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
         document.getElementById("score").style.display = "none";
-    }else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
+    } else if(scoreLose === 6 && scoreWon < 6 && scoreTie < 6){
         // you lost
         document.getElementById("gameEnd_img").src = "assets/images/youlose.png";
         document.getElementById("gameEnd_img").className = "";
         gameEnded = true;
         document.getElementById("score").style.display = "none";
-    }else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
+    } else if (scoreTie === 6 && scoreLose < 6 && scoreWon < 6){
         // Tied
         document.getElementById("gameEnd_img").className = "tie_style";
         document.getElementById("gameEnd_img").src = "assets/images/tie.png";
