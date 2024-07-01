@@ -77,46 +77,46 @@ function getRandomInt(min, max) {
 }
 
 function sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function switch_active_choice(target){
-	switch (target)	{
-		case 0:
-			document.getElementById("img-cpu").src = "assets/images/rock.png";
+    switch (target)	{
+        case 0:
+            document.getElementById("img-cpu").src = "assets/images/rock.png";
             document.getElementById("img-cpu").className = "rock";
-			break;
-		case 1:
+            break;
+        case 1:
             document.getElementById("img-cpu").src = "assets/images/Paper.png";
             document.getElementById("img-cpu").className = "paper";
-			break;
-		case 2:
+            break;
+        case 2:
             document.getElementById("img-cpu").src = "assets/images/scissors.png";
             document.getElementById("img-cpu").className = "scissor";
-			break;
-	}
+            break;
+    }
 }
 
 async function fake_choosing() {
-	let loop_till_result = 10; // iterations until result shown.
-	current = getRandomInt(0, 3);
-	delta = 1;
+    let loop_till_result = 10; // iterations until result shown.
+    current = getRandomInt(0, 3);
+    delta = 1;
 
-	for(let i = 0; i < loop_till_result; i++){
-		if(current == 2) { delta = -1; } else if(current == 0) { delta = 1; }
-		current += delta;
+    for(let i = 0; i < loop_till_result; i++){
+        if(current == 2) { delta = -1; } else if(current == 0) { delta = 1; }
+        current += delta;
 
-		switch_active_choice(current);
+        switch_active_choice(current);
 
-		await sleep(Math.max(100,i*10));
-	}
+        await sleep(Math.max(100,i*10));
+    }
 }
 
 let score = 0;
 let running = false;
 
 async function choose(user_choice){
-	if(!running){
+    if(!running){
         if(gameEnded){
             scoreWon = 0;
             scoreTie = 0;
@@ -126,23 +126,23 @@ async function choose(user_choice){
             document.getElementById("score").style.display = "flex";
         }
 
-		running = true;
-		await fake_choosing();
-		let cpu_choice = getRandomInt(0,2);
-		console.log(cpu_choice);
-		switch_active_choice(cpu_choice);
+        running = true;
+        await fake_choosing();
+        let cpu_choice = getRandomInt(0,2);
+        console.log(cpu_choice);
+        switch_active_choice(cpu_choice);
 
-		if(cpu_choice === user_choice){
-			document.getElementById("h1-result").innerHTML = "Tie";
+        if(cpu_choice === user_choice){
+            document.getElementById("h1-result").innerHTML = "Tie";
             scoreTie += 1;
-		} else if( (cpu_choice === 0 && user_choice === 2) || (cpu_choice === 2 && user_choice === 1) || (cpu_choice === 1 && user_choice === 0)){
-			document.getElementById("h1-result").innerHTML = "You Lost";
-			scoreLose += 1;
-		} else {
-			document.getElementById("h1-result").innerHTML = "You Won";
-			scoreWon += 1;
-		}
-		
+        } else if( (cpu_choice === 0 && user_choice === 2) || (cpu_choice === 2 && user_choice === 1) || (cpu_choice === 1 && user_choice === 0)){
+            document.getElementById("h1-result").innerHTML = "You Lost";
+            scoreLose += 1;
+        } else {
+            document.getElementById("h1-result").innerHTML = "You Won";
+            scoreWon += 1;
+        }
+        
         document.getElementById("score_won").innerHTML ="Won:" + scoreWon.toString();
         document.getElementById("score_tie").innerHTML ="Tie:" + scoreTie.toString();
         document.getElementById("score_lost").innerHTML="Lost:" + scoreLose.toString();
@@ -167,6 +167,6 @@ async function choose(user_choice){
         document.getElementById("score").style.display = "none";
     }
 
-		running = false;
-	}
+        running = false;
+    }
 }
