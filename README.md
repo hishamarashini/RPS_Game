@@ -20,6 +20,12 @@ In the center of the screen player will find text that explain for him to push o
 ---
 Under the images the player will find the result and counter for winning , tie, and lost
 <img src="assets/readme_images/resultscreenshot.jpg" alt="Result"  style="width:100px"/>
+
+<img src="assets/images/youlose.png" alt="You lose"  style="width:100px"/>
+<img src="assets/images/tie.png" alt="Tied"  style="width:100px"/>
+<img src="assets/images/champion-clipart.png" alt="You Won"  style="width:100px"/>
+
+
 ### Testing
 >The page is tested in different browsers, Chrome, Firefox, and Edge.
 >I confirmewd that the project is responsive, looks good and functionon all standard screens size with good color contrast.
