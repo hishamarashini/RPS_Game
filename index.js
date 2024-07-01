@@ -1,9 +1,11 @@
+/**Starting game from 0 number on screen */
 let scoreWon = 0;
 let scoreTie = 0;
 let scoreLose = 0;
 
 let gameEnded = false;
 
+/** Runing the game*/
 function runGame(user_choice) {
     if(gameEnded){
         scoreWon = 0;
@@ -14,8 +16,9 @@ function runGame(user_choice) {
         document.getElementById("score").style.display = "flex";
     }
 
+/** Computer calculation of choices */
     let cpu_choice = Math.floor(Math.random() * 3);
-    
+
     if (cpu_choice === 0 ){
         document.getElementById("img-cpu").src = "assets/images/rock.png";
         document.getElementById("img-cpu").className = "rock";
@@ -69,7 +72,7 @@ function runGame(user_choice) {
 
 }
 
-
+/**Setting time for computer time for choosing right image */
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -97,6 +100,7 @@ function switch_active_choice(target){
     }
 }
 
+/**Giving visual to computer choosing image and the number of fake calculation */
 async function fake_choosing() {
     let loop_till_result = 10; // iterations until result shown.
     current = getRandomInt(0, 3);
@@ -115,6 +119,8 @@ async function fake_choosing() {
 let score = 0;
 let running = false;
 
+
+/**user choice and game ended after 6 of 10 winning or losing and restart from top */
 async function choose(user_choice){
     if(!running){
         if(gameEnded){
