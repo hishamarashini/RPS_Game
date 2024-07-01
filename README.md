@@ -36,7 +36,7 @@ also after playing the player will get the result with one of the images under u
 | Paper |75 times|
 |Scissor|70 times|
 
-and all was working in good condition.
+and all was working in good condition. So user need to click one of the images and the computer will choose against him until onr lose or tied.
 
 
 ### Validator Testing
@@ -58,7 +58,7 @@ and all was working in good condition.
 
 I confirmed that the colors and fonts chosen are easy to read and accessible by running them in lighthouse.
 ![lighthouse](assets/readme_images/lighthous_test.png)
-![performance](assets/readme_images/performance_lighthouse.png)
+
 
 Deployment
 
