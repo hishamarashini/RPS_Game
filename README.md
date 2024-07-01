@@ -30,7 +30,7 @@ also after playing the player will get the result with one of the images under u
 > I confirmewd that the project is responsive, looks good and functionon all standard screens size with good color contrast.
 > I tested all the clicking on images
 
-| Name | Discription |
+| Name | Number of clicks |
 | ---- | ----------- |
 | Rock | 80 times|
 | Paper |75 times|
